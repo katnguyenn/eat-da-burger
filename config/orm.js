@@ -2,9 +2,9 @@ const connection = require("./connection.js");
 
 
 const orm = {
-    selectAll: function (whatToSelect, tableInput, cb) {
-        const query = "SELECT ?? FROM ??";
-        connection.query(query, [whatToSelect, tableInput], (err, data) => {
+    selectAll: function (tableInput, cb) {
+        const query = "SELECT * FROM ??";
+        connection.query(query, tableInput, (err, data) => {
             if (err) throw err;
             cb(data);
         });
