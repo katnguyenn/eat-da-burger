@@ -1,0 +1,23 @@
+<h1>Eat Da Burger!</h1>
+
+<ul>
+    {{#each burgers}}
+    <li>
+        <p>
+            {{#if devoured}}
+            {{id}}. {{burger_name}}
+
+            {{/if}}
+            <button data-burgerid="{{id}}" class="devburger">Devour It!</button>
+        </p>
+    </li>
+    {{/each}}
+</ul>
+
+
+
+<form id="createburger" class="button-size">
+    <textarea type="text" name="burg"></textarea>
+    <button type="submit">Submit!</button>
+</form>
+<h3>Enter a burger you want to eat. Click the "Submit" button.</h3>
