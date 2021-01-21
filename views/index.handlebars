@@ -1,23 +1,40 @@
-<h1>Eat Da Burger!</h1>
+<img src="/assets/img/burger.png" alt="burger" id="burgericon">
 
-<ul>
-    {{#each burgers}}
-    <li>
-        <p>
-            {{#if devoured}}
-            {{id}}. {{burger_name}}
+<h1>Eat-Da-Burger!</h1>
 
-            {{/if}}
-            <button data-burgerid="{{id}}" class="devburger">Devour It!</button>
-        </p>
-    </li>
-    {{/each}}
-</ul>
+{{!-- if devoured is false --}}
+{{#each burgers}}
+
+<p>
+    {{#if devoured}}
+    {{id}}. {{burger_name}}
+
+    <button data-burgerid="{{id}}" class="devburger">Devour It!</button>
+    {{/if}}
+
+</p>
+
+{{/each}}
+
+{{!-- else devoured is true --}}
+{{#each burgers}}
+
+<p>
+    {{#unless devoured}}
+    {{id}}. {{burger_name}}
+
+    
+    {{/unless}}
+
+</p>
+
+{{/each}}
+
 
 
 
 <form id="createburger" class="button-size">
-    <textarea type="text" name="burg"></textarea>
-    <button type="submit">Submit!</button>
+    <textarea type="text" id="textbox" name="burg"></textarea>
+    <button type="submit" id="submitbtn">Submit!</button>
 </form>
-<h3>Enter a burger you want to eat. Click the "Submit" button.</h3>
+<h4>Enter a burger you want to eat. Click the "Submit" button.</h4>
