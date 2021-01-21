@@ -1,0 +1,42 @@
+#burgericon {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 10%;
+}
+
+h1 {
+    text-align: center;
+    color: red;
+}
+
+body {
+    background-color: #FFD364;
+}
+
+
+.devburger {
+    margin-left: 5px;
+}
+
+#textbox {
+    height: 70px;
+    width: 200px;
+
+}
+
+#textbox,
+#submitbtn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#submitbtn {
+    margin-top: 5px;
+}
+
+
+h4 {
+    text-align: center;
+}
