@@ -2,7 +2,7 @@
 $(".devburger").on("click", function () {
 
     const id = $(this).data("id");
-    console.log(id);
+    
     const devour = {
         devoured: true
     };

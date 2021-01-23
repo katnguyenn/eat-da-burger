@@ -1,4 +1,4 @@
-const connection = require("./connection.js");
+const connection = require("../config/connection");
 
 // Helper function to loop through and create array of question marks and turn it into a string
 const questionMarks = num => {
@@ -35,7 +35,7 @@ const objToSql = ob => {
 const orm = {
     selectAll: function (tableInput, cb) {
         const query = "SELECT * FROM " + tableInput + ";";
-        connection.query(query, function(err, data) {
+        connection.query(query, function (err, data) {
             if (err) {
                 throw err;
             }
@@ -44,18 +44,18 @@ const orm = {
     },
 
     insertOne: function (tableInput, colToSearch, valOfCol, cb) {
-        const query = "INSERT INTO " + tableInput;
+        let query = "INSERT INTO " + tableInput;
 
-    query += " (";
-    query += colToSearch.toString();
-    query += ") ";
-    query += "VALUES (";
-    query += questionMarks(vals.length);
-    query += ") ";
+        query += " (";
+        query += colToSearch.toString();
+        query += ") ";
+        query += "VALUES (";
+        query += questionMarks(valOfCol.length);
+        query += ") ";
 
-    console.log(query);
+        console.log(query);
 
-        connection.query(query, valOfCol, function(err, data) {
+        connection.query(query, valOfCol, function (err, data) {
             if (err) {
                 throw err;
             }
@@ -65,16 +65,16 @@ const orm = {
 
     // An example of objColVals would be {name: panther, sleepy: true}
     updateOne: function (tableInput, objColVals, condition, cb) {
-        const query = "UPDATE " + tableInput;
+        let query = "UPDATE " + tableInput;
 
-    query += " SET ";
-    query += objToSql(objColVals);
-    query += " WHERE ";
-    query += condition;
+        query += " SET ";
+        query += objToSql(objColVals);
+        query += " WHERE ";
+        query += condition;
 
-    console.log(query);
+        console.log(query);
 
-        connection.query(query, function(err, data) {
+        connection.query(query, function (err, data) {
             if (err) {
                 throw err;
             }
