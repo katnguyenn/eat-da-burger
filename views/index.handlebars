@@ -2,33 +2,47 @@
 
 <h1>Eat-Da-Burger!</h1>
 
-{{!-- if devoured is false --}}
-{{#each burgers}}
+{{!-- devoured is true --}}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6" id="left-side">
+            <ul>
+            {{#each burgers}}
+                {{#unless devoured}}
+                
+                <p>
+                {{id}}. {{burger_name}}
+                
 
-<p>
-    {{#if devoured}}
-    {{id}}. {{burger_name}}
+                <button class="devburger" data-id="{{id}}" type="button">Devour It!</button>
+                </p>
+                
+                {{/unless}}
+            {{/each}}
+            </ul>
 
-    <button data-burgerid="{{id}}" class="devburger">Devour It!</button>
-    {{/if}}
-
-</p>
-
-{{/each}}
-
-{{!-- else devoured is true --}}
-{{#each burgers}}
-
-<p>
-    {{#unless devoured}}
-    {{id}}. {{burger_name}}
-
+        </div>
     
-    {{/unless}}
+        <div class="col-sm-6" id="right-side">
 
-</p>
+            <ul>
+            {{#each burgers}}
 
-{{/each}}
+            <p>
+                {{#if devoured}}
+                {{id}}. {{burger_name}}
+
+
+                {{/if}}
+
+            </p>
+
+            {{/each}}
+            </ul>
+
+        </div>
+    </div>
+</div>
 
 
 
