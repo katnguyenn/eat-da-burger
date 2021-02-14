@@ -13,7 +13,7 @@ The app will store every burger in a database, whether devoured or not.
 The burger logger was created using MYSQL, Node, Express, Handlebars and a homemade ORM(yum!). The structure follows the MVC design pattern.
 
 
-![Homepage](public/assets/img/homepage.png)
+<img src="public/assets/img/homepage.png" alt="Eat-Da-Burger App" width=75%>
 
 
 
@@ -23,7 +23,7 @@ The burger logger was created using MYSQL, Node, Express, Handlebars and a homem
 * npm install express-handlebars
 * npm install mysql
 
-Application in use:
+## Usage
 
 ![App](public/assets/img/app.gif)
 
@@ -32,4 +32,5 @@ Application in use:
 <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
 ## Link
+[Eat-Da-Burger](https://lets-eat-a-burger.herokuapp.com/)
 
