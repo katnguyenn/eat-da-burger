@@ -34,3 +34,5 @@ The burger logger was created using MYSQL, Node, Express, Handlebars and a homem
 ## Link
 [Eat-Da-Burger](https://lets-eat-a-burger.herokuapp.com/)
 
+[LinkedIn](https://www.linkedin.com/in/katherine-nguyen-205a7b13a/)
+
